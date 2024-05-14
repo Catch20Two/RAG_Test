@@ -1,10 +1,11 @@
 
+This is a very simple example of how to implement Retrieval-Augmented Generation (RAG) and a localized Large Language Model (LLM). In theroy, a local LLM can operate without connecting to the internet or centalized AI (e.g. OpenAI, ChatGPT, etc). This example will need the internet only for the purpose of adding new material to its knowledge corpus. RAG allows for the LLM to only concern itself with the provided corpus and implements the option to structure the output using a user defined template. The ultimate goal is with this approach is to acheive a secure way to review documents without sharing any information with unwanted parties. The "RAG_Test.py" was developed and tested within a Ubuntu virtual machine with the intent of running a more sophisticated version in an AWS EC2 instance.
+
+Getting Started --------------------------------------------------------------------------------------------------------------------------------------------
 Create the folder called "LLM". Then download and add the following LLM from HuggingFace (https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF):
 llama-2-7b-chat.Q5_0.gguf
 
 Running the code will create two additional folders i.e. "chroma_db1" and "chroma_db2". 
-
-The code was developed and tested within a Ubuntu virtual machine with the intent of running a more sophisticated version in an AWS EC2 instance. 
 
 1. Start the program. A new local Chroma database ("chroma_db1") is created fresh each time. This was intentional for demo purposes and can be changed by adding a function to check for a persistent Chroma db.
 2. The LLM will need to initialize and a starting knowledge db will be built using "https://en.wikipedia.org/wiki/Punk_rock". This is done with various Langchain tools which scrape the HTML text from the website and split the text into sentence-transformed weights
