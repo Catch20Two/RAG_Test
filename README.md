@@ -16,7 +16,9 @@ for the first Chroma db. This should take about a minute depending on your local
    3. "wiki" - Rather than typing out a whole URL, you can just type in a word affiliated with a wikipedia page to add to the list of web pages i.e. "https://en.wikipedia.org/wiki/" + your word
    4. "remove" - Delete a webpage from the list. Note: "update" will still need to be used.
    5. "update" - Refreshes the Chroma dbs with the latest list of web pages.
-   6. "prompt" - Allows for a new RAG prompt to be created by the user. The default is "Answer the question with a single sentence" which will attempt to do just that. Changing this will result in different output and processing times. Note: some fun options are "Answer the question with a single word" or "Answer the question in the form of a question". 
+   6. "prompt" - Allows for a new RAG prompt to be created by the user. The default is "Answer the question with a single sentence" which will attempt to do just that. Changing this will result in different output and processing times. Note: some fun options are "Answer the question with a single word" or "Answer the question in the form of a question".
+  
+      Anything other than the options listed above will run a query against the corpus of knowledge built within the Chroma db using the very basic Llama2-7B LLM to make sense of it. 
 
   
 
