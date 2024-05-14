@@ -1,0 +1,58 @@
+
+The following is some basic response testing which includes the the time for the LLM to spin up, the process for adding new material, prompted questions ("Q"), the time for response (e.g. ": 1 min"), and the response ("-"). The attempt was not to break the model, but to see its basic capability. 
+------------------------------------------------------
+
+start: 48 sec
+Q: What is punk music?: 2:47 min
+-   Punk music is a music genre that emerged in the mid-1970s, characterized by short, fast-paced songs with hard-edged melodies and singing styles with stripped-down instrumentation, typically revolving around anti-establishment and anti-authoritarian themes, and embracing a DIY ethic through self-production and independent distribution of recordings.
+
+Q: What is punk music?: 10 sec
+- Punk music is a music genre that emerged in the mid-1970s, characterized by short, fast-paced songs with hard-edged melodies and stripped-down instrumentation, typically revolving around anti-establishment and anti-authoritarian themes, and embracing a DIY ethic through self-production and independent distribution.
+
+Added Wiki "Jazz" then update(): 1:30 min
+
+Q: What is punk music?: 1 sec
+- Punk music is a music genre that emerged in the mid-1970s, characterized by short, fast-paced songs with hard-edged melodies and stripped-down instrumentation, typically revolving around anti-establishment and anti-authoritarian themes, and embracing a DIY ethic through self-production and independent distribution.
+
+Q: What year was Jacopo Peri's most lost Dafne, produced? : 33 sec
+ - Jacopo Peri's mostly lost Dafne was produced in 1597.
+(I tried to trick it with this obscure fact, but it got it pretty close based on the Opera wiki page (1598).)
+
+Q: How much of La Scala's annual budget of €115 million is from ticket sales and private donations?
+- According to La Scala's budget for the 2018-2019 season, ticket sales accounted for approximately 60% of the opera house's annual budget, while private donations accounted for around 40%.
+(It got this one correct too. I'm not sure how....)
+
+Q: What are the longitude and latitude coordinates of the Ulriksdal Palace in Sweden? : 1.10 min
+- The longitude and latitude coordinates of the Ulriksdal Palace in Sweden are not provided in any of the given documents.
+(Nice. Stumped it)
+
+Add Wiki "Confidencen" then update(): 1.32 min
+
+Q: What are the longitude and latitude coordinates of the Ulriksdal Palace in Sweden? :45 sec
+- The longitude and latitude coordinates of the Ulriksdal Palace in Sweden are not available on the provided Wikipedia pages.
+(They are annotated as 59°23′10.65″N 18°1′2.35″E on the wiki page)
+
+Q: When did Kjerstin Dellert start managing the Confidencen theatre?: 2.29 min
+- According to the documents provided, Kjerstin Dellert started managing the Confidencen theatre in 1976.
+(This is correct)
+
+Q: What are all of the proper nouns in the following sentence: " The longitude and latitude coordinates of the Ulriksdal Palace in Sweden are not available on the provided Wikipedia pages." : 1.23 min
+- Ulriksdal Palace, Sweden
+(2 out of 3. It did not count Wikipedia)
+
+Q:  Is the word "Wikipedia" a proper noun? Respond with yes or no. : 1 min
+- Yes.
+(This is correct)
+
+Q: What are all of the proper nouns in the following sentence: " The longitude and latitude coordinates of the Ulriksdal Palace in Sweden are not available on the provided Wikipedia pages." : 1.10 min
+- Ulriksdal Palace, Sweden
+(Same as before.)
+
+Q: What is punk music? : 2:54 min
+- Punk music is a music genre that emerged in the mid-1970s, typically characterized by short, fast-paced songs with hard-edged melodies and singing styles with stripped-down instrumentation, and a DIY ethic where many bands self-produce recordings and distribute them through independent labels, revolving around anti-establishment and anti-authoritarian themes.
+
+Add Wiki "Matchematics_of_paper_folding" then update(): 1.49 min
+
+Q: What is Haga's first theorem? : 1.41 min
+- Haga's first theorem states that the ratio of the length of a folded paper to its width is equal to 2 times the ratio of the length of the paper before folding to its width.
+(This is kind of true, but has no bearing on the content of the Wikipedia page. The goal was to stump the LLM with a complex question.)
